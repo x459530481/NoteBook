@@ -1,0 +1,57 @@
+==================ios部分======================================================================================================
+AS中新建plugin项目
+    1、打开后进入ios/class目录（非example下的ios目录）
+    2、添加对应的viewplugin、viewfactory
+    3、在原有SwiftxxxPlugin中register刚刚添加的viewfactory
+    4、配置podspec（添加依赖、资源文件等）
+    （如只是刚刚开始编写插件，为了方便调试可直接在example下的ios目录下编写viewplugin、viewfactory，并调试成功后复制到ios/class目录下，register在appdelegate中，添加依赖、资源文件就按照普通ios项目操作）
+再进入xcode打开example/ios的项目
+    Pod目录下
+    ../..xxxx下找到插件目录（刚刚的/class文件夹）添加刚才添加所有文件（因为在其他地方给ios项目添加文件xcode是暂时看不到的，需要在Xcode中addfile进来）
+    配置plist的相应权限（相机、定位等）和允许使用UIKitView（<key>io.flutter.embedded_views_preview</key><true/>）
+    cd到example下的ios目录 执行 pod update
+再回到AS中
+    pubspec.yaml中执行packages get
+    
+
+以上plugin插件基本创建完毕
+项目中使用plugin
+    AS中新建flutter项目
+    pubspec.yaml添加plugin依赖（可以相对目录../形式、可以git形式、可以pub.dev形式）后执行packages get
+再用xcode打开flutter项目中iOS目录（项目中只有一个ios目录没有example目录）
+    配置plist的相应权限（相机、定位等）和允许使用UIKitView（<key>io.flutter.embedded_views_preview</key><true/>）
+    cd到项目ios目录下pod update
+操作完毕后就可以在AS中的Dart文件里可以正常使用plugin了
+
+
+==================android部分====================================================================================================
+AS中新建plugin项目
+    AS打开新建项目中example/android的项目
+    在插件名的模块下添加viewplugin、viewfactory等文件进行插件编写
+    在原有的xxxplugin中register刚刚添加的viewfactory
+再回到flutter项目或example/android项目中
+    添加安卓权限（相机、定位等）
+    pubspec.yaml中packages get
+
+
+以上plugin插件基本创建完毕
+项目中使用plugin
+    AS中新建flutter项目
+    pubspec.yaml添加plugin依赖（可以相对目录../形式、可以git形式、可以pub.dev形式）后执行packages get
+再用AS打开flutter项目中android目录（项目中只有一个android目录没有example目录）
+    添加安卓权限（相机、定位等）
+操作完毕后就可以在AS中的Dart文件里可以正常使用plugin了
+
+
+==================pub.dev发布部分================================================================================================
+AS中打开plugin项目的pubspec.yaml文件进行配置
+name: 、description:、version: 、author: 、homepage: 等信息
+命令行中开启翻墙
+    start_tuproxy
+命令行中cd到plugin项目的目录下
+翻墙软件中开启翻墙软件的全局模式
+命令行中执行 flutter packages pub publish 校验文件信息
+出现提示y/n后选择y
+（首次进行时会提示出一个pub.dev的授权链接，复制后再浏览器打开允许授权后会在命令行提示授权成功并继续操作，再执行flutter packages pub publish，非首次不会有这一步）
+出现upload。。。等待上传结束 success
+成功后可以在你的pub.dev账号中看到并可以在网站中搜索到

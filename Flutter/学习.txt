@@ -1,0 +1,38 @@
+flutter现成插件
+https://pub.flutter-io.cn/
+
+ios现有工程接入flutter
+https://www.jianshu.com/p/b52a98eb961e
+
+android现有工程接入flutter
+https://blog.csdn.net/weixin_38499102/article/details/97764242
+
+swift 实现flutter基本交互 - 传值篇
+https://www.jianshu.com/p/852a2e192d76
+
+Flutter 开发文档 中文
+https://flutter.cn/docs
+
+文档看到这里
+https://flutter.cn/docs/get-started/flutter-for/android-devs
+
+Flutter中的序列化 json<=>bean
+https://blog.csdn.net/joye123/article/details/101379165
+
+Flutter 项目中使用 json_serializable 序列化和反序列化 Json，jsonkey 参数解释
+https://gitissue.com/issues/5c366ead5a80817c3be9e729
+
+dart json=>bean工具 结合上面序列化工具一起使用
+https://blog.csdn.net/xudailong_blog/article/details/95168949
+
+Flutter Plugin
+需要系统自带命令行切换到项目目录下，执行开启网络代理翻墙（命令行翻墙需要设置）才能提交到pub.dev
+https://blog.csdn.net/baoolong/article/details/89153985
+https://www.jianshu.com/p/c38dd2efa64a
+https://www.jianshu.com/p/46957915a909
+
+Flutter packages
+https://www.jianshu.com/p/7fedd71b72e6
+
+Flutter module
+https://www.jianshu.com/p/17f0e06b52c3
