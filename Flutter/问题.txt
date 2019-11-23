@@ -1,0 +1,17 @@
+问题1
+Error connecting to the service protocol: HttpException: Connection closed before full header was received, uri = http://127.0.0.1:1025/RE7xH4ApsjM=/ws
+
+运行ios出这个问题时先查看 ios plist文件中权限是否给了、能否访问http地址等配置
+
+Android出这个问题尝试以下方式
+首先排查基本错误 ：查看自己Studio 的 File => Settings | Languages & Frameworks => Flutter SDK Path是否对。
+
+错误可能性1：下载的是别人的项目，而你们的flutter环境并不一样造成的，建议查看他当时的Flutter SDK 版本，将我们的替换成他的版本， 或者不知道他版本的话，请移步FlutterSDK官网https://flutter.io/sdk-archive/#windows直接下载Stable channel最新版 解压  打开目录 找到flutter_console.bat 打开 输入flutter doctor 看看有无错误 然后再去环境变量的Path中修改SDK目录  再将Studio的flutterSdk路径改成最新的 重启Studio即可
+
+错误可能性2：可能设置了代理，需要修改代理
+
+错误可能性3：地址链接自查 https://github.com/flutter/flutter/issues/6724
+
+
+==========================================================================================
+
