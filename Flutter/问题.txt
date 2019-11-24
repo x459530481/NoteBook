@@ -14,4 +14,8 @@ Android出这个问题尝试以下方式
 
 
 ==========================================================================================
-
+build_runner工具命令生成对应.g文件，出现莫名其妙的问题 可以尝试以下
+项目根目录下的.dart_tool整个删除掉！！！！！
+flutter packages pub run build_runner build --delete-conflicting-outputs
+flutter packages pub run build_runner clean
+flutter packages pub run build_runner build
