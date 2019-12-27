@@ -1,3 +1,6 @@
+源码文档 可以查原生方法对应flutter方法
+https://engine.chinmaygarde.com/interface_flutter_text_input_view.html
+
 flutter现成插件
 https://pub.flutter-io.cn/
 
