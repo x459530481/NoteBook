@@ -54,4 +54,9 @@ name: 、description:、version: 、author: 、homepage: 等信息
 出现提示y/n后选择y
 （首次进行时会提示出一个pub.dev的授权链接，复制后再浏览器打开允许授权后会在命令行提示授权成功并继续操作，再执行flutter packages pub publish，非首次不会有这一步）
 出现upload。。。等待上传结束 success
+
+如果开了vpn还是不行的，可以尝试使用这个。
+flutter packages pub publish --server=https://pub.dartlang.org
+将地址指向官方的，还不是国内镜像。
+
 成功后可以在你的pub.dev账号中看到并可以在网站中搜索到
